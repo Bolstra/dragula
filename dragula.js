@@ -463,7 +463,7 @@ function dragula(initialContainers, options) {
 
 		function moveMirror() {
 			fd.mutate(function() {
-				var translateFunc = 'translate3d(' + x + 'px, ' + y + 'px, 0px) rotate(-5deg)';
+				var translateFunc = 'translate3d(' + x + 'px, ' + y + 'px, 0px) rotate(-3deg)';
 
 				_mirror.style.transform = translateFunc;
 				_mirror.style.webkitTransform = translateFunc;
