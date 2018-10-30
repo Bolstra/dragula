@@ -463,13 +463,15 @@ function dragula(initialContainers, options) {
 
 		function moveMirror() {
 			fd.mutate(function() {
-				var translateFunc = 'translate3d(' + x + 'px, ' + y + 'px, 0px) rotate(-3deg)';
-
-				_mirror.style.transform = translateFunc;
-				_mirror.style.webkitTransform = translateFunc;
-				_mirror.style.msTransform = translateFunc;
-				_mirror.style.MozTransform = translateFunc;
-				_mirror.classList.remove('gu-hide');
+        if(_mirror) {
+          var translateFunc = 'translate3d(' + x + 'px, ' + y + 'px, 0px) rotate(-3deg)';
+      
+          _mirror.style.transform = translateFunc;
+          _mirror.style.webkitTransform = translateFunc;
+          _mirror.style.msTransform = translateFunc;
+          _mirror.style.MozTransform = translateFunc;
+          _mirror.classList.remove('gu-hide');
+        }
 			});
 		}
 	}
